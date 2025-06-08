@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    color: #000;
+    font-family: -apple-system, Roboto, Helvetica Neue, Trebuchet MS, sans-serif;
+    font-size: 15px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #fbfbfb;
+}
+
+.goog-te-banner-frame,
+.skiptranslate {
+    display: none !important;
+}
+
+img {
+    max-width: 100%;
+}
+
+.header {
+    float: left;
+    width: 100%;
+    background: #fff;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.logo {
+    max-width: 208px;
+    max-height: 60px;
+}
+
+.content {
+    float: left;
+    width: 100%;
+}
+
+.inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 35px 0 15px;
+}
+
+.parahraph {
+    text-align: left;
+}
+
+.paragraph strong {
+    color: #003087;
+}
+
+.chests {
+    display: flex;
+    column-gap: 15px;
+    margin: 35px 0 35px;
+}
+
+.chests img {
+    animation: chest 1s infinite;
+}
+
+.chest {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, .2);
+    box-sizing: border-box;
+    display: block;
+    flex-basis: 100% !important;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.button {
+    background-color: #003087;
+    padding: 10px 25px;
+    border-radius: 6px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .21);
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid rgba(0, 0, 0, .3);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .21);
+    animation: quickWobble 2s infinite;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.answer {
+    background-color: #003087;
+    padding: 10px 25px;
+    border-radius: 6px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .21);
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    width: 100%;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.prize {
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+}
+
+@media screen and (max-width:800px) {
+    .content {
+        padding: 0 10px;
+    }
+
+    .chests {
+        column-gap: 8px;
+    }
+
+    .button {
+        font-size: 14px;
+        font-weight: normal;
+        padding: 8px 10px;
+    }
+}
+
+.loader {
+    align-items: center;
+    background-color: rgba(0, 0, 0, .5);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.loader__dual-ring::after {
+    -webkit-animation: loader-dual-ring 1.2s linear infinite;
+    animation: loader-dual-ring 1.2s linear infinite;
+    border-color: #ff2110 #ffbb08 #1a73e8 #31c552;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 6px;
+    content: "";
+    display: block;
+    height: 32px;
+    margin: 8px;
+    width: 32px;
+}
+
+@-webkit-keyframes loader-dual-ring {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes loader-dual-ring {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@-webkit-keyframes quickWobble {
+
+    0%,
+    89% {
+        transform: scale(1)
+    }
+
+    90% {
+        transform: scale(1.04)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes quickWobble {
+
+    0%,
+    89% {
+        transform: scale(1)
+    }
+
+    90% {
+        transform: scale(1.04)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+@-webkit-keyframes chest {
+    0% {
+        transform: scaleY(1) scaleX(1)
+    }
+
+    50% {
+        transform: scaleY(1.05) scaleX(.97)
+    }
+
+    to {
+        transform: scaleY(1) scaleX(1)
+    }
+}
+
+@keyframes chest {
+    0% {
+        transform: scaleY(1) scaleX(1)
+    }
+
+    50% {
+        transform: scaleY(1.05) scaleX(.97)
+    }
+
+    to {
+        transform: scaleY(1) scaleX(1)
+    }
+}
+
+canvas {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+}

