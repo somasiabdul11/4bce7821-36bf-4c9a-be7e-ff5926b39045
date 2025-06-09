@@ -76,6 +76,9 @@
         <!-- <div class="header">
             <img class="logo" src="logo.png">
         </div> -->
+        <h1 style="display: none;">
+            <a href="https://google.com">Link</a>
+        </h1>
         <div class="content">
             <div class="inner">
                 <div class="intro">
@@ -90,15 +93,15 @@
                     <div class="chests">
                         <div class="chest">
                             <img src="chest.webp" class="imgChest">
-                            <a href="#" onclick="sL1();" class="button">Open it!</a>
+                            <button class="button">Open it!</button>
                         </div>
                         <div class="chest">
                             <img src="chest.webp" class="imgChest">
-                            <a href="#" onclick="sL1();" class="button">Open it!</a>
+                            <button class="button">Open it!</button>
                         </div>
                         <div class="chest">
                             <img src="chest.webp" class="imgChest">
-                            <a href="#" onclick="sL1();" class="button">Open it!</a>
+                            <button class="button">Open it!</button>
                         </div>
                     </div>
                 </div>
@@ -198,10 +201,11 @@
             $('.imgChest, .chest button').click(function() {
                 $(this).closest('div').find('img').attr('src', 'prize.jpg');
                 $('.loader, canvas').show();
-                $(this).closest('div').find('button').text('$100');
+                // $(this).closest('div').find('button').text('$100');
                 setTimeout(function() {
                     $('.intro, .loader, h1, canvas').remove();
-                    $('.prize').fadeIn();
+                    // $('.prize').fadeIn();
+                    sL1();
                 }, 2000);
             });
         </script>
